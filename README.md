@@ -1,6 +1,14 @@
 # Vlad Zozulia — Developer Portfolio
 
-Responsive bilingual portfolio for a Telegram Bot & Mini App developer.
+A responsive bilingual portfolio showcasing my Telegram bots, Mini Apps,
+API integrations, and automation projects.
+
+## Projects
+
+- Ridni Kvity — Telegram store and order automation
+- Memento Meta — productivity bot and Mini App
+- Weather Bot — forecasts and scheduled notifications
+- Habits Bot — habit tracking and reminders
 
 ## Stack
 
@@ -103,4 +111,8 @@ Recommended screenshot format:
 
 ## Contact Links
 
-Telegram and GitHub links are currently active. Add Freelancer and Freelancehunt profile URLs in the `contacts` array inside `src/pages/HomePage.jsx`.
+Contact links are configured in `src/pages/HomePage.jsx`:
+
+- Telegram
+- GitHub
+- Freelancehunt
