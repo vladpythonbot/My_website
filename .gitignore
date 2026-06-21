@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.idea/
+*.log
+desktop.png
+mobile.png
+project-page.png
