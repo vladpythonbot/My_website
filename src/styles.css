@@ -683,146 +683,51 @@ h3 {
   overflow: visible;
 }
 
-.ae-root .ae-stroke {
-  vector-effect: non-scaling-stroke;
+.ae-bulb {
+  transform-origin: 48px 88px;
 }
 
-.ae-relax {
-  transform: rotate(0);
+.ae-glass {
+  fill: transparent;
 }
 
-.ae-arm,
-.ae-bot-arm,
-.ae-head {
-  transform: rotate(0);
+.ae-rays {
+  opacity: 0.25;
 }
 
-.ae-bot {
-  transform: translateX(111px);
-}
-
-.ae-wave-1 {
-  opacity: 0.9;
-}
-
-.ae-cargo {
-  transform: translate(0, 0);
-  opacity: 1;
-}
-
-.ae-wave-2 {
-  opacity: 0.5;
-}
-
-.ae-wave-3 {
-  opacity: 0.2;
+.ae-filament {
+  fill: none;
+  stroke: var(--text);
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .ae-relax {
+  .ae-bulb {
     transform-box: view-box;
-    transform-origin: 28px 80px;
-    animation: ae-rock 5s ease-in-out infinite;
+    animation: ae-bulb-sway 4s ease-in-out infinite;
   }
 
-  .ae-arm {
-    transform-box: view-box;
-    transform-origin: 27px 52px;
-    animation: ae-sip 5s ease-in-out infinite;
+  .ae-glass {
+    animation: ae-bulb-light 3.2s ease-in-out infinite;
   }
 
-  .ae-bot {
-    transform-box: view-box;
-    animation: ae-work-route 9s ease-in-out infinite;
+  .ae-rays {
+    animation: ae-rays-light 3.2s ease-in-out infinite;
   }
-
-  .ae-bot-arm {
-    transform-box: view-box;
-    transform-origin: 64px 60px;
-    animation: ae-lift-cargo 9s ease-in-out infinite;
-  }
-
-  .ae-cargo {
-    transform-box: view-box;
-    animation: ae-carry-cargo 9s ease-in-out infinite;
-  }
-
-  .ae-track-tread {
-    stroke-dasharray: 4 4;
-    animation: ae-track-move 0.8s linear infinite;
-  }
-
-  .ae-head {
-    transform-box: view-box;
-    transform-origin: 72px 54px;
-    animation: ae-scan 1.8s ease-in-out infinite;
-  }
-
-  .ae-wave {
-    animation: ae-pulse 2.4s ease-in-out infinite;
-  }
-
-  .ae-wave-2 { animation-delay: 0.4s; }
-  .ae-wave-3 { animation-delay: 0.8s; }
 }
 
-@keyframes ae-rock {
+@keyframes ae-bulb-sway {
   0%, 100% { transform: rotate(-2deg); }
   50% { transform: rotate(2deg); }
 }
 
-@keyframes ae-sip {
-  0%, 40%, 100% { transform: rotate(0); }
-  55%, 75% { transform: rotate(-16deg); }
+@keyframes ae-bulb-light {
+  0%, 18%, 100% { fill: transparent; }
+  28%, 82% { fill: currentColor; }
 }
 
-@keyframes ae-work-route {
-  0%, 24% { transform: translateX(111px); }
-  58%, 78% { transform: translateX(-1px); }
-  94%, 100% { transform: translateX(111px); }
-}
-
-@keyframes ae-lift-cargo {
-  0%, 13%, 72%, 100% { transform: rotate(0); }
-  20%, 58% { transform: rotate(58deg); }
-}
-
-@keyframes ae-carry-cargo {
-  0%, 13% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-  20%, 24% {
-    transform: translate(0, -18px);
-    opacity: 1;
-  }
-  58%, 64% {
-    transform: translate(-112px, -18px);
-    opacity: 1;
-  }
-  70%, 76% {
-    transform: translate(-112px, 0);
-    opacity: 1;
-  }
-  80%, 100% {
-    transform: translate(-112px, 0);
-    opacity: 0;
-  }
-}
-
-@keyframes ae-track-move {
-  to { stroke-dashoffset: -8; }
-}
-
-@keyframes ae-scan {
-  0%, 100% { transform: rotate(-16deg); }
-  50% { transform: rotate(16deg); }
-}
-
-@keyframes ae-pulse {
-  0% { opacity: 0; }
-  30% { opacity: 0.9; }
-  100% { opacity: 0; }
+@keyframes ae-rays-light {
+  0%, 18%, 100% { opacity: 0.2; }
+  28%, 82% { opacity: 1; }
 }
 
 .contact-section .section-heading p:last-child {

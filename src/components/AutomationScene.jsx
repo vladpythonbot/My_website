@@ -1,5 +1,5 @@
 export function AutomationScene({
-  size = 104,
+  size = 76,
   className = "",
   title = "",
 }) {
@@ -8,13 +8,13 @@ export function AutomationScene({
   return (
     <span
       className={`automation-emblem ${className}`}
-      style={{ width: size * 2, height: size }}
+      style={{ width: size, height: size }}
     >
       <svg
         className="ae-root"
-        width={size * 2}
+        width={size}
         height={size}
-        viewBox="0 0 192 96"
+        viewBox="0 0 96 96"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         role={decorative ? "presentation" : "img"}
@@ -24,66 +24,26 @@ export function AutomationScene({
         {!decorative && <title>{title}</title>}
 
         <g
-          className="ae-stroke"
+          className="ae-bulb"
           stroke="currentColor"
           strokeWidth="3"
           strokeLinecap="round"
           strokeLinejoin="round"
-          fill="none"
         >
-          <line className="ae-ground" x1="8" y1="80" x2="188" y2="80" strokeWidth="2" />
-
-          <g className="ae-relax">
-            <line x1="14" y1="52" x2="40" y2="68" />
-            <line x1="14" y1="52" x2="18" y2="68" />
-            <line x1="18" y1="68" x2="40" y2="68" />
-            <line x1="18" y1="68" x2="17" y2="80" />
-            <line x1="40" y1="68" x2="42" y2="80" />
-
-            <circle cx="20" cy="46" r="4" />
-            <line x1="24" y1="50" x2="38" y2="62" />
-            <path d="m38 62 7-3 4 5" />
-
-            <g className="ae-arm">
-              <path d="m27 52 6-4" />
-              <line x1="33" y1="46" x2="35" y2="44" />
-            </g>
+          <g className="ae-rays">
+            <path d="M48 9v8" />
+            <path d="m25 18 6 7" />
+            <path d="m71 18-6 7" />
+            <path d="M15 41h9" />
+            <path d="M72 41h9" />
           </g>
 
-          <g className="ae-cargo" strokeWidth="2">
-            <rect x="166" y="66" width="11" height="9" rx="1" />
-            <path d="M166 69.5h11M171.5 66v3.5" />
-          </g>
-
-          <g className="ae-bot">
-            <rect x="64" y="54" width="16" height="22" rx="4" />
-            <line x1="64" y1="62" x2="80" y2="62" strokeWidth="2" />
-
-            <g className="ae-bot-arm">
-              <line x1="64" y1="60" x2="55" y2="69" />
-              <path d="m53 68 2 2 2-2" strokeWidth="2" />
-            </g>
-
-            <g className="ae-head">
-              <path d="M64 54a8 8 0 0 1 16 0" />
-              <circle cx="72" cy="50" r="2.4" fill="currentColor" stroke="none" />
-            </g>
-
-            <line x1="72" y1="42" x2="72" y2="38" strokeWidth="2" />
-
-            <g className="ae-track" strokeWidth="2">
-              <rect x="63" y="74" width="18" height="7" rx="3.5" />
-              <circle cx="67.5" cy="77.5" r="1.6" />
-              <circle cx="76.5" cy="77.5" r="1.6" />
-              <path className="ae-track-tread" d="M66 74h4m4 0h4M66 81h4m4 0h4" />
-            </g>
-
-            <g strokeWidth="2">
-              <path className="ae-wave ae-wave-1" d="M69 36a4 4 0 0 1 6 0" />
-              <path className="ae-wave ae-wave-2" d="M66 33a7 7 0 0 1 12 0" />
-              <path className="ae-wave ae-wave-3" d="M63 30a10 10 0 0 1 18 0" />
-            </g>
-          </g>
+          <path
+            className="ae-glass"
+            d="M48 20c-15 0-25 10-25 24 0 9 5 15 11 21 3 3 5 7 5 11h18c0-4 2-8 5-11 6-6 11-12 11-21 0-14-10-24-25-24Z"
+          />
+          <path className="ae-filament" d="m39 50 9-8 9 8M48 42v34" />
+          <path d="M39 76h18M40 82h16M44 88h8" fill="none" />
         </g>
       </svg>
     </span>
