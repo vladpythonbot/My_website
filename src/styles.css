@@ -693,18 +693,21 @@ h3 {
 
 .ae-arm,
 .ae-bot-arm,
-.ae-head,
-.ae-wheel {
+.ae-head {
   transform: rotate(0);
 }
 
 .ae-bot {
-  transform: translateX(0);
+  transform: translateX(10px);
 }
 
-.ae-blip,
 .ae-wave-1 {
   opacity: 0.9;
+}
+
+.ae-cargo {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .ae-wave-2 {
@@ -730,29 +733,29 @@ h3 {
 
   .ae-bot {
     transform-box: view-box;
-    animation: ae-roll 2.2s ease-in-out infinite;
+    animation: ae-work-route 9s ease-in-out infinite;
   }
 
   .ae-bot-arm {
     transform-box: view-box;
     transform-origin: 64px 60px;
-    animation: ae-tap 0.5s ease-in-out infinite;
+    animation: ae-lift-cargo 9s ease-in-out infinite;
   }
 
-  .ae-wheel {
+  .ae-cargo {
     transform-box: view-box;
-    transform-origin: 76px 77px;
-    animation: ae-spin 1.1s linear infinite;
+    animation: ae-carry-cargo 9s ease-in-out infinite;
+  }
+
+  .ae-track-tread {
+    stroke-dasharray: 4 4;
+    animation: ae-track-move 0.8s linear infinite;
   }
 
   .ae-head {
     transform-box: view-box;
     transform-origin: 72px 54px;
     animation: ae-scan 1.8s ease-in-out infinite;
-  }
-
-  .ae-blip {
-    animation: ae-blink 0.5s steps(1, end) infinite;
   }
 
   .ae-wave {
@@ -773,23 +776,42 @@ h3 {
   55%, 75% { transform: rotate(-16deg); }
 }
 
-@keyframes ae-roll {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(-3px); }
+@keyframes ae-work-route {
+  0%, 24% { transform: translateX(10px); }
+  58%, 78% { transform: translateX(-10px); }
+  94%, 100% { transform: translateX(10px); }
 }
 
-@keyframes ae-tap {
-  0%, 100% { transform: rotate(0); }
-  50% { transform: rotate(18deg); }
+@keyframes ae-lift-cargo {
+  0%, 13%, 72%, 100% { transform: rotate(0); }
+  19%, 59% { transform: rotate(28deg); }
 }
 
-@keyframes ae-spin {
-  to { transform: rotate(360deg); }
+@keyframes ae-carry-cargo {
+  0%, 13% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  19%, 24% {
+    transform: translate(7px, -8px);
+    opacity: 1;
+  }
+  58%, 64% {
+    transform: translate(-13px, -8px);
+    opacity: 1;
+  }
+  70%, 76% {
+    transform: translate(-13px, 0);
+    opacity: 1;
+  }
+  80%, 100% {
+    transform: translate(-13px, 0);
+    opacity: 0;
+  }
 }
 
-@keyframes ae-blink {
-  0%, 49% { opacity: 0.15; }
-  50%, 100% { opacity: 1; }
+@keyframes ae-track-move {
+  to { stroke-dashoffset: -8; }
 }
 
 @keyframes ae-scan {
