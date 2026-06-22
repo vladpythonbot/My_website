@@ -44,6 +44,15 @@ npm run build
 npm run preview
 ```
 
+## Deploy to Railway
+
+Connect this repository to a Railway service. Railway will install the
+dependencies, run `npm run build`, and start the site with `npm start`.
+
+No environment variables are required. Railway provides `PORT`
+automatically. After deployment, create a public domain in the service
+networking settings.
+
 ## Add a New Project
 
 All project content is stored in:
