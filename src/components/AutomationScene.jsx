@@ -8,13 +8,13 @@ export function AutomationScene({
   return (
     <span
       className={`automation-emblem ${className}`}
-      style={{ width: size, height: size }}
+      style={{ width: size * 2, height: size }}
     >
       <svg
         className="ae-root"
-        width={size}
+        width={size * 2}
         height={size}
-        viewBox="0 0 96 96"
+        viewBox="0 0 192 96"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         role={decorative ? "presentation" : "img"}
@@ -31,7 +31,7 @@ export function AutomationScene({
           strokeLinejoin="round"
           fill="none"
         >
-          <line className="ae-ground" x1="8" y1="80" x2="88" y2="80" strokeWidth="2" />
+          <line className="ae-ground" x1="8" y1="80" x2="188" y2="80" strokeWidth="2" />
 
           <g className="ae-relax">
             <line x1="14" y1="52" x2="40" y2="68" />
@@ -51,8 +51,8 @@ export function AutomationScene({
           </g>
 
           <g className="ae-cargo" strokeWidth="2">
-            <rect x="52" y="66" width="11" height="9" rx="1" />
-            <path d="M52 69.5h11M57.5 66v3.5" />
+            <rect x="166" y="66" width="11" height="9" rx="1" />
+            <path d="M166 69.5h11M171.5 66v3.5" />
           </g>
 
           <g className="ae-bot">
@@ -77,12 +77,12 @@ export function AutomationScene({
               <circle cx="76.5" cy="77.5" r="1.6" />
               <path className="ae-track-tread" d="M66 74h4m4 0h4M66 81h4m4 0h4" />
             </g>
-          </g>
 
-          <g strokeWidth="2">
-            <path className="ae-wave ae-wave-1" d="M69 36a4 4 0 0 1 6 0" />
-            <path className="ae-wave ae-wave-2" d="M66 33a7 7 0 0 1 12 0" />
-            <path className="ae-wave ae-wave-3" d="M63 30a10 10 0 0 1 18 0" />
+            <g strokeWidth="2">
+              <path className="ae-wave ae-wave-1" d="M69 36a4 4 0 0 1 6 0" />
+              <path className="ae-wave ae-wave-2" d="M66 33a7 7 0 0 1 12 0" />
+              <path className="ae-wave ae-wave-3" d="M63 30a10 10 0 0 1 18 0" />
+            </g>
           </g>
         </g>
       </svg>
