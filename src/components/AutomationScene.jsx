@@ -51,8 +51,8 @@ export function AutomationScene({
           </g>
 
           <g className="ae-cargo" strokeWidth="2">
-            <rect x="56" y="68" width="7" height="6" rx="1" />
-            <path d="M56 70.5h7M59.5 68v2.5" />
+            <rect x="52" y="66" width="11" height="9" rx="1" />
+            <path d="M52 69.5h11M57.5 66v3.5" />
           </g>
 
           <g className="ae-bot">
@@ -60,9 +60,8 @@ export function AutomationScene({
             <line x1="64" y1="62" x2="80" y2="62" strokeWidth="2" />
 
             <g className="ae-bot-arm">
-              <path d="m64 60-7 4" />
-              <line x1="57" y1="64" x2="55" y2="69" strokeWidth="2" />
-              <path d="m53.5 69 1.5 1.5 1.5-1.5" strokeWidth="2" />
+              <line x1="64" y1="60" x2="55" y2="69" />
+              <path d="m53 68 2 2 2-2" strokeWidth="2" />
             </g>
 
             <g className="ae-head">
