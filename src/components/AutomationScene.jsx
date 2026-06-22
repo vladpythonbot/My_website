@@ -42,7 +42,6 @@ export function AutomationScene({
             className="ae-glass"
             d="M48 20c-15 0-25 10-25 24 0 9 5 15 11 21 3 3 5 7 5 11h18c0-4 2-8 5-11 6-6 11-12 11-21 0-14-10-24-25-24Z"
           />
-          <path className="ae-filament" d="m39 50 9-8 9 8M48 42v34" />
           <path d="M39 76h18M40 82h16M44 88h8" fill="none" />
         </g>
       </svg>

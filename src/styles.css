@@ -696,11 +696,6 @@ h3 {
   opacity: 0;
 }
 
-.ae-filament {
-  fill: none;
-  stroke: var(--text);
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .ae-bulb {
     transform-box: view-box;
