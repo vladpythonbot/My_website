@@ -670,62 +670,6 @@ h3 {
   color: var(--bg);
 }
 
-.automation-emblem {
-  display: inline-flex;
-  line-height: 0;
-  margin-bottom: 20px;
-  color: var(--bg);
-}
-
-.automation-emblem svg {
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-.ae-bulb {
-  transform-origin: 48px 88px;
-}
-
-.ae-glass {
-  fill: transparent;
-}
-
-.ae-rays {
-  color: #ffd84d;
-  opacity: 0;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .ae-bulb {
-    transform-box: view-box;
-    animation: ae-bulb-pulse 2.4s steps(1, end) infinite;
-  }
-
-  .ae-glass {
-    animation: ae-bulb-light 2.4s steps(1, end) infinite;
-  }
-
-  .ae-rays {
-    animation: ae-rays-light 2.4s steps(1, end) infinite;
-  }
-}
-
-@keyframes ae-bulb-pulse {
-  0%, 24%, 100% { filter: none; }
-  25%, 78% { filter: drop-shadow(0 0 7px rgb(255 216 77 / 0.8)); }
-}
-
-@keyframes ae-bulb-light {
-  0%, 24%, 100% { fill: transparent; }
-  25%, 78% { fill: #ffd84d; }
-}
-
-@keyframes ae-rays-light {
-  0%, 24%, 100% { opacity: 0; }
-  25%, 78% { opacity: 1; }
-}
-
 .contact-section .section-heading p:last-child {
   color: color-mix(in srgb, var(--bg) 70%, transparent);
 }

@@ -18,7 +18,6 @@ import { useMemo, useState } from "react";
 import { ProjectCard } from "../components/ProjectCard";
 import { SectionHeading } from "../components/SectionHeading";
 import { Seo } from "../components/Seo";
-import { AutomationScene } from "../components/AutomationScene";
 import { projects } from "../data/projects";
 import { useLanguage } from "../state/LanguageContext";
 
@@ -157,7 +156,6 @@ export function HomePage() {
         <section id="contact" className="section contact-section">
           <div className="container contact-grid">
             <div>
-              <AutomationScene />
               <SectionHeading eyebrow={t.contact.eyebrow} title={t.contact.title} description={t.contact.text} />
             </div>
             <div className="contact-list">
